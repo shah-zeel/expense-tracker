@@ -6,7 +6,17 @@ require('dotenv').config()
 
 const PORT = process.env.PORT
 
+// middLewares
+app.use(express.json())
+app.use(cors())
+
+app.get('/', (req, res) => {
+    res.send('Hello World')
+})
+
 const server = () => {
-    console.log(`Running on ${PORT}`);
+    app.listen(PORT, () => {
+        console.log(`Running on ${PORT}`);
+    })
 }
 server()
