@@ -15,3 +15,9 @@ In package.json make the following changes
     "start": "nodemon app.js"
 },
 ```
+### .env setup
+In .env make the following changes
+```
+PORT = 3000
+MONGO_URL = <mongodb+srv url>
+```
